@@ -6,8 +6,10 @@
 // pins for the LEDs
 const int LEDpins[3] = {11, 10, 9};
 int LEDs[3] = {0, 0, 0};
-boolean Xprev[3] = { false, false, false };
+
+// pina for pumpus and solenoides
 const int Xpins[3] = {2, 3, 4};
+boolean Xprev[3] = { false, false, false };
 
 // pins for the Buttons
 const int SWpins[3] = {A3, A4, A5};
@@ -35,6 +37,7 @@ void loop() {
   for (int i = 0; i <= 2; i++) {
     boolean x = digitalRead(SWpins[i]);
     if ( x != Xprev[i] ) {
+      // Any change in the status of this button is reflected in the LED and pump/solenoid.
       analogWrite(LEDpins[i], x ? 255 : 0);
       digitalWrite(Xpins[i], x ? HIGH : LOW);
       Xprev[i] = x;
@@ -45,20 +48,25 @@ void loop() {
   Serial.println();
 
   if (Serial.available() > 0) {
+    //
     uint32_t d = millis();
     while (Serial.available() > 0) {
+      // Suppose every line contains three sets of numbers.
       for (int i = 0; i <= 2; i++) {
+        // If the number of digits in a line is not a multiple of 3, 
+        // then one or two single line breaks must be entered.
+        // See also: https://www.arduino.cc/reference/en/language/functions/communication/serial/parseint/
         LEDs[i] = Serial.parseInt();
       }
       if (Serial.read() == '\n') {
         Serial.print("LED\t");
         Serial.print(millis()); Serial.print("\t");
-        // fade the three LEDs and print the three numbers in one string with TABs:
+        // Fade the three LEDs and print the three numbers in one line separated by TABs:
         for (int i = 0; i <= 2; i++) {
           // constrain the values to 0 - 255
           LEDs[i] = constrain(LEDs[i], 0, 255);
           analogWrite(LEDpins[i], 255 - LEDs[i]);
-          digitalWrite(Xpins[i], (LEDs[i] > 240) ? LOW : HIGH);
+          digitalWrite(Xpins[i], (LEDs[i] > 127) ? LOW : HIGH); // Negative logic
           Serial.print(LEDs[i]); Serial.print("\t");
         }
         Serial.println();
