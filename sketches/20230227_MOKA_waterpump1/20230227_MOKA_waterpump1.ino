@@ -15,7 +15,7 @@ boolean Xprev[3] = {false, false, false};
 
 // pins for WLS (water level sensor)
 const int WLSpins[3] = {A3, A4, A5};
-const int WLSpows[3] = {13, 12, 8};
+const int WLSpows[3] = {8, 12, 13};
 int WLSvals[3] = {0, 0, 0};
 const int WLS_LOW = 250; // Lower limit of WLS
 const int WLS_HIGH = 500; // Upper limit of WLS

@@ -15,11 +15,9 @@ Experimental repository for SCADA testbed in MYTechLab
      ├──  README.md
      ├──  SCADAtestbed1-in.sh
      ├──  SCADAtestbed1-main.sh
-     ├──  SCADAtestbed1-out.sh
-     ├──  SCADAtestbed1-out1.sh
-     └──  SCADAtestbed1-out2.sh
+     └──  SCADAtestbed1-out.sh
      
-     1 directory, 15 files (Fri Mar  3 03:54:50 AST 2023)
+     1 directory, 13 files (Fri Mar  3 04:10:56 AST 2023)
 
 Note: URL = https://github.com/hohno-46466/xZone--MYTechLab--SCADAtestbed
 
