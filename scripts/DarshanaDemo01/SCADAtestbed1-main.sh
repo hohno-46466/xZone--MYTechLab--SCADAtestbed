@@ -11,10 +11,10 @@ TOPIC1=MYTechLab/STBin1
 TOPIC2=MYTechLab/STBout1
 
 # Verify that the necessary commands are available
-(which -a cu > /dev/null 2>&1 || (echo "# Error: install cu"; exit 1)) && exit 1
-(which -a nkf > /dev/null 2>&1 || (echo "# Error: install nkf"; exit 1)) && exit 1
-(which -a mosquitto_sub > /dev/null 2>&1 || (echo "# Error: install mosquitto_sub"; exit 1)) && exit 1
-(which -a mosquitto_pub > /dev/null 2>&1 || (echo "# Error: install mosquitto_pub"; exit 1)) && exit 1
+(which -a cu > /dev/null 2>&1 || (echo "# Error: install cu"; exit 1)) || exit 1
+(which -a nkf > /dev/null 2>&1 || (echo "# Error: install nkf"; exit 1)) || exit 1
+(which -a mosquitto_sub > /dev/null 2>&1 || (echo "# Error: install mosquitto_sub"; exit 1)) || exit 1
+(which -a mosquitto_pub > /dev/null 2>&1 || (echo "# Error: install mosquitto_pub"; exit 1)) || exit 1
 
 # Check to see if you have administrative privileges
 sudo date || exit 1
