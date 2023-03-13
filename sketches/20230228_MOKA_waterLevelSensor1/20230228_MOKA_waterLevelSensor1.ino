@@ -4,8 +4,8 @@
 // Last update: Tue Feb 28 12:38:34 AST 2023
 
 // Sensor pins
-#define sensorPower 7
-#define sensorPin A0
+#define sensorPower 6
+#define sensorPin A4
 
 #define WLS_L 250
 #define WLS_H 500
@@ -16,10 +16,7 @@ int val = 0;
 void setup() {
   // Set D7 as an OUTPUT
   pinMode(sensorPower, OUTPUT);
-  
-  // Set to LOW so no power flows through the sensor
-  digitalWrite(sensorPower, LOW);
-  
+  digitalWrite(sensorPower, LOW); // Set to LOW so no power flows through the sensor
   Serial.begin(57600);
 }
 
@@ -30,7 +27,7 @@ void loop() {
   Serial.print("Water level: ");
   Serial.println(level);
   
-  delay(1000);
+  delay(200);
 }
 
 //This is a function used to get the reading
