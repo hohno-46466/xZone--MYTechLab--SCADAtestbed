@@ -2,9 +2,8 @@
 
 Experimental repository for SCADA testbed in MYTechLab
 
-     ./xZone--MYTechLab--SCADAtestbed
+    ./xZone--MYTechLab--SCADAtestbed
      ├──  README.md
-     ├──  README.md.old
      ├──  documents/
      │   ├──  HowToUseThis.md
      │   ├──  README.md
@@ -23,7 +22,6 @@ Experimental repository for SCADA testbed in MYTechLab
      │   │   ├──  Darshana-Ch2F1.sh
      │   │   ├──  Darshana-Ch2F2.sh
      │   │   ├──  Darshana-Ch2F3.sh
-     │   │   ├──  Darshana-all.sh
      │   │   ├──  README.md
      │   │   ├──  SCADAtestbed1-in.sh
      │   │   ├──  SCADAtestbed1-main.sh
@@ -40,8 +38,7 @@ Experimental repository for SCADA testbed in MYTechLab
      └──  tools/
          └──  README.md
      
-     8 directories, 28 files (Mon Mar 20 20:07:32 JST 2023)
-
+     9 directories, 26 files (Fri Mar  3 04:12:11 AST 2023)
 
 Note: URL = https://github.com/hohno-46466/xZone--MYTechLab--SCADAtestbed
 
