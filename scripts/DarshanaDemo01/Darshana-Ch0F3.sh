@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Ch0 - main pump
+# F3  - cheking overflow
+
 BROKER1="broker.hivemq.com"
 TOPIC1="Darshana/Ch0F3"
 

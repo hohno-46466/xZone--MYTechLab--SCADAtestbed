@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Ch2 - sub pump #2
+# F1  - turn on/of the pump
+
 BROKER1="broker.hivemq.com"
 TOPIC1="Darshana/Ch2F1"
 

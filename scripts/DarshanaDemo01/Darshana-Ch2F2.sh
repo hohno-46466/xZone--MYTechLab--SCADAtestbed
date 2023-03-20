@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Ch2 - sub pump #2
+# F2  - reading water level
+
 BROKER1="broker.hivemq.com"
 TOPIC1="Darshana/Ch2F2"
 
