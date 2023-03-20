@@ -12,13 +12,24 @@ Experimental repository for SCADA testbed in MYTechLab
      ├──  Darshana-Ch2F1.sh
      ├──  Darshana-Ch2F2.sh
      ├──  Darshana-Ch2F3.sh
-     ├──  Darshana-all.sh
+     ├──  Darshana-startAll.sh
      ├──  README.md
      ├──  SCADAtestbed1-in.sh
      ├──  SCADAtestbed1-main.sh
      └──  SCADAtestbed1-out.sh
      
      1 directory, 14 files (Sun Mar  5 13:45:11 EST 2023)
+
+To start:
+
+1. sh SCADAtestbed1-main.sh TTYdevice
+
+    (ex) sh SCADAtestbed1-main.sh /dev/cu.usbmodem14101
+
+1. start all Darshana-ChxFx.sh scripts
+
+    (ex) sh Darshana-startAll.sh
+
 
 Note: URL = https://github.com/hohno-46466/xZone--MYTechLab--SCADAtestbed
 
