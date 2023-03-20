@@ -2,7 +2,8 @@
 // 20230227_MOKA_waterpump1.ino
 
 // Prev update: Mon Feb 27 16:40:02 AST 2023
-// Last update: Sat Mar  4 05:14:21 AST 2023
+// Prev update: Sat Mar  4 05:14:21 AST 2023
+// Last update: Tue Mar 21 01:54:06 JST 2023
 
 #define LOOP_INTERVAL (200)
 
@@ -50,8 +51,8 @@ void setup() {
 
 void loop() {
   // print keyword and millis
-  Serial.print("SW/Pot\t");
-  Serial.print(millis()); Serial.print("\t");
+  /*$1*/ Serial.print("SW/Pot\t");
+  /*$2*/ Serial.print(millis()); Serial.print("\t");
 
   // print numbers (three sets of Buttons and Pots) in one string with TABs:
   for (int i = 0; i <= 2; i++) {
@@ -68,10 +69,10 @@ void loop() {
       }
       Xprev[i] = ss;
     }
-    Serial.print(ss); Serial.print("\t"); // 1: SW on, 0: SW off
-    Serial.print(wl); Serial.print("\t"); // water level
-    Serial.print(flagStop); Serial.print("\t"); // 1: forced stop, 0: not stopped
-    Serial.print(analogRead(POTpins[i])); Serial.print("\t");
+    /*$3,$7,$11*/ Serial.print(ss); Serial.print("\t"); // 1: SW on, 0: SW off
+    /*$4,$8,$12*/ Serial.print(wl); Serial.print("\t"); // water level
+    /*$5,$9,$13*/ Serial.print(flagStop); Serial.print("\t"); // 1: forced stop, 0: not stopped
+    /*$6,$7,$14*/ Serial.print(analogRead(POTpins[i])); Serial.print("\t");
   }
   Serial.println();
 
