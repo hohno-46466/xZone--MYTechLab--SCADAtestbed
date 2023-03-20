@@ -4,8 +4,11 @@
 # Last update: Mon Mar 20 21:21:30 JST 2023
 
 KEY1=${1:-"LED"}
-BROKER1=${2:-"broker.hivemq.com"}
-TOPIC1=${3:-"MYTechLab/STBout1"}
+
+TOPICx=${2:-"MOKA1"}
+TOPIC1="MYTechLab/${TOPICx}-out"
+
+BROKER1=${3:-"broker.hivemq.com"}
 
 (which -a mosquitto_sub > /dev/null 2>&1 || (echo "# Error: install mosquitto_sub"; exit 1)) || exit 1
 

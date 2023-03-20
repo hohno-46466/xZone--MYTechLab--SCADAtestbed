@@ -5,11 +5,12 @@
 
 SERIAL=${1:-"/dev/cu.usbmodem21301"}
 
-BROKER1="broker.hivemq.com"
-BROKER2="broker.hivemq.com"
+TOPICx=${2:-"MOKA1"}
+TOPIC1="MYTechLab/${TOPICx}-in"
+TOPIC2="MYTechLab/${TOPICx}-out"
 
-TOPIC1="MYTechLab/STBin1"
-TOPIC2="MYTechLab/STBout1"
+BROKER1=${3:-"broker.hivemq.com"}
+BROKER2=${3:-"broker.hivemq.com"}
 
 # Verify that the necessary commands are available
 (which -a cu > /dev/null 2>&1 || (echo "# Error: install cu"; exit 1)) || exit 1
