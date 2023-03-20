@@ -1,8 +1,7 @@
 #!/bin/sh
 
-BROKER1=broker.hivemq.com
-
-TOPIC1=Darshana/Ch2F1
+BROKER1="broker.hivemq.com"
+TOPIC1="Darshana/Ch2F1"
 
 mosquitto_sub -t $TOPIC1 -h $BROKER1 \
 | awk '{

@@ -1,10 +1,11 @@
 #!/bin/sh
 
-# Last update: Fri Mar  3 04:05:40 AST 2023
+# Prev update: Fri Mar  3 04:05:40 AST 2023
+# Last update: Mon Mar 20 21:21:30 JST 2023
 
-KEY1=${1:-LED}
-BROKER1=${2:-broker.hivemq.com}
-TOPIC1=${3:-MYTechLab/STBout1}
+KEY1=${1:-"LED"}
+BROKER1=${2:-"broker.hivemq.com"}
+TOPIC1=${3:-"MYTechLab/STBout1"}
 
 (which -a mosquitto_sub > /dev/null 2>&1 || (echo "# Error: install mosquitto_sub"; exit 1)) || exit 1
 

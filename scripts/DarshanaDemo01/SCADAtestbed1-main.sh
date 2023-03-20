@@ -1,14 +1,15 @@
 #!/bin/sh
 
-# Last update: Fri Mar  3 04:05:40 AST 2023
+# Prev update: Fri Mar  3 04:05:40 AST 2023
+# Last update: Mon Mar 20 21:22:44 JST 2023
 
-SERIAL=${1:-/dev/cu.usbmodem21301}
+SERIAL=${1:-"/dev/cu.usbmodem21301"}
 
-BROKER1=broker.hivemq.com
-BROKER2=broker.hivemq.com
+BROKER1="broker.hivemq.com"
+BROKER2="broker.hivemq.com"
 
-TOPIC1=MYTechLab/STBin1
-TOPIC2=MYTechLab/STBout1
+TOPIC1="MYTechLab/STBin1"
+TOPIC2="MYTechLab/STBout1"
 
 # Verify that the necessary commands are available
 (which -a cu > /dev/null 2>&1 || (echo "# Error: install cu"; exit 1)) || exit 1
