@@ -1,0 +1,7 @@
+
+# Wed Mar  1 06:25:18 AST 2023
+
+# Bob
+
+$ mosquitto_sub -t hohno/in1 -h broker.hivemq.com | (cat -u | sudo cu -s 57600 -l /dev/cu.usbmodem21201 | nkf -u -Lu) | sed -u -n '/^LED/p' | mosquitto_pub -l -t hohno/out1 -h broker.hivemq.com
+
